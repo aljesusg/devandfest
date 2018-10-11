@@ -2,18 +2,19 @@ sudo: false
 dist: trusty
 language: node_js
 node_js:
-  - "8"
+- '8'
 install:
-  - npm install -g firebase-tools
-  - yarn --frozen-lockfile --non-interactive || (echo 'package.json is not in sync with yarn.lock, check that you include yarn.lock' && false)
+- npm install -g firebase-tools
+- yarn --frozen-lockfile --non-interactive || (echo 'package.json is not in sync with
+  yarn.lock, check that you include yarn.lock' && false)
 script:
-  - echo "Linter"
-  - yarn lint
-  - echo "Building"
-  - yarn build
+- echo "Linter"
+- yarn lint
+- echo "Building"
+- yarn build
 deploy:
   provider: firebase
-  token: $FIREBASE_TOKEN
+  token: QyJvdg8SsNY2nuGE1uljFAM9GhgWs5DMqP0OxsMM65K9mA8UFF12duLmN1cZPzSzsGHJ6Sc2KL5FICPDBTpX+FCcAixIgbFD/cj2uHRuLZX39UbUNqd50OBWR46JunHh83TDolVEkn9UUdeKVoWBQeIK6aU5LLMRKRqluFVfIhh+rh/dai2W0LniZkWvmjdE+iMQwtXcQ1JLXeukWXf2s8yinbi8Aa3wWL0CX56aWMuCCsk5ryERkFXL80Z9v4pAXyfALWxNCgjOCFYA7BCs/iOFYin70ik/Y7YppflafekhJtU8InTEa/IVi7gq7A7FsrHOfr1E+c7I/ehB4zAtIeqgjfm9BR9PZIEeZHA+0Ru+1aXYUluLmmzf8aKMgVxpgFsN9AZ15J+1+0PI9rZodNXIJDoFoMPEjUONTdXVdIIRehRn+QMzioi1PEHoszcRKMgD8qDhlQDrmUZmcDcHe4cqTp3uOyAMldWkPO4r1mvFIM9rcr8rUZJvoPMDNESBNqhbV5B3Y4Wvj6RGcd0He6DbCfl/OzNwYoPGJDWxBRwaJ7oots0ddnydmPKl5Z03V4sJH2qLnK0xU5IMDuS64KiiFmqrZbmMQOCNN7ELMnL+BWhpQvWHkYauRppxyQByPLitA0LNoNGaJofqQMK6DO2JSoPGLGG6JKmh5CUvd7I=
   on:
     branch: master
-  project: "devandfest"
+  project: devandfest
